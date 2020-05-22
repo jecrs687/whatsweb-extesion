@@ -1,0 +1,21 @@
+.buttonVel{
+    color:gray;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 3px;
+    background-color: transparent;
+    border: none;
+    margin: 5px;
+}
+.buttonPress{
+    background-color: #bbb;
+
+    border-radius: 3px;
+
+}
+.dark{
+    --panel-background : #000;
+    --background-default:#000;
+    --background-default-hover:#333;
+    --background-default-active:#222;
+}
