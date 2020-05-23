@@ -81,6 +81,6 @@ const interval = setInterval(()=>{
         clearInterval(interval)
         buttonVelocidade(header);
         buttonDark(header)
-        statusDownload()
+        // statusDownload()
     }
 },1000)
