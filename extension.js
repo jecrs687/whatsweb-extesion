@@ -37,23 +37,36 @@ async function buttonVelocidade(header){
 }
 
 async function buttonDark(header){
-    
-    var pressionado2 = false
+    var pressionado = await localStorage.getItem('modeOfWhatsappWeb')
+    if(!pressionado){
+        pressionado = 0
+    }
+    console.log(pressionado)
+
     const button = document.createElement('button')
     button.innerHTML = "#";
     button.classList.add("buttonVel");
     header.appendChild(button)
+    if( pressionado==1)
+    {
+        document.querySelector(":root").classList.remove("dark")
+        button.classList.remove('buttonPress');
+    }else{
+        document.querySelector(":root").classList.add("dark")
+        button.classList.add("buttonPress");            
+    }
     button.addEventListener("click", ()=>{
-        if( pressionado2)
+        if( pressionado==0)
         {
-            pressionado2 = !pressionado2
+            pressionado = 1
             document.querySelector(":root").classList.remove("dark")
             button.classList.remove('buttonPress');
+            localStorage.setItem('modeOfWhatsappWeb', 1)
         }else{
-            pressionado2 = !pressionado2
-            
+            pressionado = 0
             document.querySelector(":root").classList.add("dark")
             button.classList.add("buttonPress");            
+            localStorage.setItem('modeOfWhatsappWeb', 0)
         }
 
     })

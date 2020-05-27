@@ -2,6 +2,10 @@
     "manifest_version": 2,
     "name": "WhatsappWebTools",
     "version":"0.0.3",
+    "browser_action":{
+        "default_popup":"index.html",
+        "default_title":"WhatsappWeb-Tools"
+    },
     "content_scripts":[
         {
         "matches":[
