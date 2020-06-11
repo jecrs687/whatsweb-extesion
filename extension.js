@@ -89,7 +89,7 @@ async function statusDownload(){
 }
 
 const interval = setInterval(()=>{
-    const header = document.querySelector("._3auIg");
+    const header = document.querySelector('header');
     if(header){
         clearInterval(interval)
         buttonVelocidade(header);
